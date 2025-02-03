@@ -19,7 +19,7 @@ WORKDIR /app
 VOLUME /tmp
 
 # Copy the built JAR from the previous stage
-COPY --from=build /app/target/publicApi-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=build /app/target/*.jar app.jar
 
 # Expose the correct port
 EXPOSE 8083
